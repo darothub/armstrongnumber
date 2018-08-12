@@ -52,6 +52,10 @@ body{
         height: 50px;
     
     }
+    .result h2{
+       font-size: 18px;
+       font-weight: bold;
+    }
 }
 
 header{

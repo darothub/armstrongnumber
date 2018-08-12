@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+header{
+    margin: 90px auto;
+    text-align: center;
+
+}
+
+section{
+
+    display: flex;
+    width: 600px;
+    height: 300px;
+    margin: -50px auto;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+section .container{
+    display: grid;
+    width: 440px;
+    height:300px;
+    background-color: lightslategray;
+    margin: 100px auto;
+    border-radius: 20px;
+    box-shadow: 2px 5px 10px  #000;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "display display display display"
+                         "form form form form";
+                          
+}
+
+.container .display{
+    grid-area: display;
+    width: 270px;
+    height: 65px;
+    background-color: white;
+    margin:25px auto;
+    padding: 5px;
+    box-shadow: 2px 5px 5px  #000;
+    text-align: center;
+}
+
+.result{
+    margin-top:5px;
+    line-height: 2px;
+}
+.container #form{
+    grid-area: form;
+    width: 100%;
+    height: 205px;
+    margin:20px auto;
+    display: grid;
+    padding: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "input input input input"
+                        ". checkbtn cancelbtn .";
+    
+    
+}
+
+
+.container #input{
+    grid-area: input;
+    width: 170px;
+    height: 50px;
+    background-color: lightgrey;
+    margin:-20px auto;
+    overflow: hidden;
+}
+
+.container .btn{
+    margin-top: -10px;
+    color: white;
+    font-weight: bold;
+    width:120px;
+    height: 50px;
+}
+
+.container #checkbtn{
+    grid-area: checkbtn;
+    background-color: green;
+   
+    
+}
+.container #cancelbtn{
+    grid-area: cancelbtn;
+    background-color:red;
+    
+}
+
+.container #cancelbtn:hover, .container #checkbtn:hover{
+    cursor: pointer;
+    background-color: darkseagreen;
+    
+}
+*:focus{
+    outline: none !important
+}
+*::-moz-focus-inner, *::-moz-focus-outer{
+    border: 0;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}

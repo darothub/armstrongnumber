@@ -29,7 +29,7 @@ const isArmstrong=(e)=>{
     }
     else if(input.length >= 4){
         checkbtn.disabled = true
-        checkbtn.style.backgroundColor = "gray"
+        checkbtn.style.backgroundColor = "#dddddd"
         
         
         checkbtn.addEventListener('mouseover', errorHandler)

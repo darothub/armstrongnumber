@@ -30,8 +30,6 @@ const isArmstrong=(e)=>{
     else if(input.length >= 4){
         checkbtn.disabled = true
         checkbtn.style.backgroundColor = "#dddddd"
-        
-        
         checkbtn.addEventListener('mouseover', errorHandler)
         document.getElementById('checkbtn').removeAttribute('disabled');
     }
@@ -49,6 +47,9 @@ const toClear=()=>{
     let input = document.getElementById('input').value;
     let display = document.getElementById('display');
     let form = document.getElementById('form')
+    checkbtn.removeEventListener('mouseover', errorHandler)
+    document.getElementById('checkbtn').removeAttribute('disabled');
+    checkbtn.style.backgroundColor = "green"
     form.reset();
     display.innerHTML =``;
 }

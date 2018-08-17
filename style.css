@@ -81,7 +81,7 @@ section .container{
     height:300px;
     background-color: lightslategray;
     margin: 100px auto;
-    border-radius: 20px;
+    border-radius: 100px;
     box-shadow: 2px 5px 10px  #000;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: "display display display display"

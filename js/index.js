@@ -10,7 +10,35 @@ const addIt =(total, curr)=> total + curr;
 
 //Error display
 const errorHandler=()=>{
+    checkbtn.disabled = true
     display.innerHTML = `<div class="result"><h2> Invalid input</h2> <h2>length</h2></div>`
+}
+
+const errorRemover=()=>{
+    document.getElementById('checkbtn').removeAttribute('disabled');
+    checkbtn.removeEventListener('mouseover', errorHandler)
+    display.innerHTML = ``
+}
+// Check input length and justify
+const checkInput =()=>{
+    let input = document.getElementById('input')
+    if(input.value.length <=2){
+        display.innerHTML = `<div class="result"><h4> Number must be</h4> <h4>three digit</h4></div>`
+    }
+    else if(input.value.length == 3){
+        errorRemover();
+        checkbtn.addEventListener('click', isArmstrong);
+        checkbtn.style.backgroundColor = "green" 
+        
+        
+    }
+    else if(input.value.length >=4){
+        checkbtn.addEventListener('mouseover', errorHandler)
+        checkbtn.style.backgroundColor = "#dddddd"
+        document.getElementById('checkbtn').removeAttribute('disabled');
+        
+    }
+    
 }
 
 //To test if a number isArmstrong

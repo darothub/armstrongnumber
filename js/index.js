@@ -1,7 +1,22 @@
 // Getting DOM elements
-
+let input = document.getElementById('input')
 let checkbtn = document.getElementById('checkbtn');
 let cancelbtn = document.getElementById('cancelbtn');
+
+// To number from default increment or decrement
+input.onkeydown = function(e) {
+    if((e.keyCode >= 38 && e.keyCode <= 40)) {
+        return false;
+    }
+}
+
+// number.onkeydown = function(e) {
+//     if(!((e.keyCode > 95 && e.keyCode < 106)
+//       || (e.keyCode > 47 && e.keyCode < 58) 
+//       || e.keyCode == 8)) {
+//         return false;
+//     }
+// }
 
 //Arithmetrics
 const cubeIt=(num)=> num**3;
@@ -13,7 +28,7 @@ const errorHandler=()=>{
     checkbtn.disabled = true
     display.innerHTML = `<div class="result"><h2> Invalid input</h2> <h2>length</h2></div>`
 }
-
+//To remove default error
 const errorRemover=()=>{
     document.getElementById('checkbtn').removeAttribute('disabled');
     checkbtn.removeEventListener('mouseover', errorHandler)
